@@ -9,6 +9,8 @@ python-dotenv
 cloudpickle
 dill
 xgboost
+PyYAML
+config-box
 bcrypt
 flask
 -e . #whenever requirement.txt file library installing when it see -e .  execution code it automatically trigger the setup.py file to create this model as package

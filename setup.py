@@ -21,7 +21,7 @@ def Get_Requirements(filepath:str)->list[str]:
 setup(
     name = 'NEFT50_PROJECT',
     version = '0.0.1',
-    long_description= open('readme.md','r').read(),
+    long_description= open('README.md','r').read(),
     author='Raees Azam Shaikh',
     author_email='shaikhraishazam@gmail.com',
     url = 'https://github.com/raish123/NEFT50_RegressionModel/',

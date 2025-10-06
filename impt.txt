@@ -1,0 +1,1 @@
+ECR repository URI:-308430683228.dkr.ecr.ap-south-1.amazonaws.com/stockpredictionproject

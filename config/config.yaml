@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+#first Step we are doing is Data ingestion -->
+#location/source where data can be store such server,cloud,database ..etc we have to fetch the data from that source store into specific location mentioned in yaml file!!
+data_ingestion:
+  root_dir_path: artifacts/data_ingestion
+  train_test_path: artifacts/data_ingestion/
+  raw_file_path: D:\NEFT50_RegressionModel\INDIA VIX_minute.csv

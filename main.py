@@ -1,0 +1,16 @@
+from src.NEFT50.Pipelines.data_ingestion_pipeline import DataIngestionPipeline
+from src.NEFT50.loggers import logger
+from src.NEFT50.Exception import CustomException
+import os,sys
+
+stage_name = "Data Ingestion"
+
+try:
+    logger.info(f">>>{stage_name} started <<<<")
+    #creating an object of DataIngestionTraining class
+    dit = DataIngestionPipeline()
+    dit.main()
+    logger.info(f">>>{stage_name} stopped <<<<")
+
+except Exception as e:
+    raise CustomException(e,sys)

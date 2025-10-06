@@ -39,6 +39,8 @@ files = [
     f"src/{project}/Pipelines/__init__.py",
     f"src/{project}/Pipelines/training.py",
     f"src/{project}/Pipelines/prediction.py",
+    f"src/{project}/Entity/__init__.py",
+    f"src/{project}/Entity/config_entity.py"
    
 ]
 

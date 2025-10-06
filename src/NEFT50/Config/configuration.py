@@ -3,7 +3,7 @@ from src.NEFT50.loggers import logger
 from src.NEFT50.Exception import CustomException
 from src.NEFT50.Constants import CONFIG_FILEPATH,PARAM_FILEPATH
 import os,sys
-from src.NEFT50.Entity import DataIngestionConfig,DataTransformationConfig
+from src.NEFT50.Entity import DataIngestionConfig,DataTransformationConfig,ModelTrainingConfig
 
 
 
@@ -57,3 +57,20 @@ class ConfigurationManager():
         )
 
         return data_transformation_config
+    
+    #another method we used to get model training config!!!
+    def get_model_training_config(self) ->ModelTrainingConfig:
+        #initializing the local variable which is used inside this method only
+        config = self.config.model_training
+      
+
+        #creating directory artifacts/model_training
+        Create_Directory([config.root_dir_path])
+
+        #creating an object of class variable and assigning value to parameter and taking rtn as fuctn
+        model_training_config = ModelTrainingConfig(
+            root_dir_path = config.root_dir_path,
+            save_best_model_dirpath=config.save_best_model_dirpath,
+     
+        )
+        return model_training_config

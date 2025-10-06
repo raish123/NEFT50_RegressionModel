@@ -12,3 +12,7 @@ data_transformation:
   root_dir_path: artifacts/data_transformation
   save_obj_dirpath: artifacts/data_transformation/preprocessor.pkl
   csv_dir_path: artifacts/data_ingestion/ #yaha se csv file ley kar data transformation doing
+
+model_training:
+  root_dir_path: artifacts/model_training
+  save_best_model_dirpath: artifacts/model_training/models.pkl

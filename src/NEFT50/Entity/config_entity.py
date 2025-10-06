@@ -25,3 +25,10 @@ class DataTransformationConfig():
     save_obj_dirpath: Path
     csv_dir_path: Path
 
+#step 3) update the entity file:- entity file is nothing but whatever parameter we have used in yaml file 
+#we gonna defined them as a class variable
+@dataclass
+class ModelTrainingConfig():
+    #defining the class variable
+    root_dir_path:Path
+    save_best_model_dirpath:Path

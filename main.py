@@ -1,5 +1,5 @@
 from src.NEFT50.Pipelines.data_ingestion_pipeline import DataIngestionPipeline
-from src.NEFT50.Pipelines.data_transformation_pipeline import DataTransformationPipeline
+from src.NEFT50.Pipelines.data_training_pipeline import ModelTrainingPipeline
 from src.NEFT50.loggers import logger
 from src.NEFT50.Exception import CustomException
 import os,sys
@@ -18,12 +18,12 @@ except Exception as e:
 
 print('*'*100)
 
-stage_name2 = "Data Transformation"
+stage_name2 = "Data Transformation and Modelling performing"
 
 try:
     logger.info(f">>>{stage_name2} started <<<<")
     #creating an object of DataIngestionTraining class
-    dt = DataTransformationPipeline()
+    dt = ModelTrainingPipeline()
     dt.main()
     logger.info(f">>>{stage_name2} stopped <<<<")
 

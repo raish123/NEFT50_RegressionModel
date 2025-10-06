@@ -3,7 +3,7 @@ from src.NEFT50.loggers import logger
 from src.NEFT50.Exception import CustomException
 from src.NEFT50.Constants import CONFIG_FILEPATH,PARAM_FILEPATH
 import os,sys
-from src.NEFT50.Entity import DataIngestionConfig
+from src.NEFT50.Entity import DataIngestionConfig,DataTransformationConfig
 
 
 
@@ -38,3 +38,22 @@ class ConfigurationManager():
          
         )
         return data_ingestion_config
+
+
+    def get_data_transformation_config(self):
+        #creating local variable which was used inside this method
+        transform = self.config.data_transformation
+
+        #creating root directory in artifacts folder for datatransformation
+        Create_Directory([transform.root_dir_path]) #create artifacts/data_transformation folder
+
+        #creating an object &
+        #assigining the value to DataTransformationConfig class variable and taking rtn as function
+        data_transformation_config = DataTransformationConfig(
+            root_dir_path=transform.root_dir_path,
+            save_obj_dirpath=transform.save_obj_dirpath,
+            csv_dir_path=transform.csv_dir_path,
+           
+        )
+
+        return data_transformation_config

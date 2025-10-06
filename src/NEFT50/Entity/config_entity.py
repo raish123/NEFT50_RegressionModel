@@ -11,3 +11,17 @@ class DataIngestionConfig():
     root_dir_path:Path
     train_test_path: Path
     raw_file_path:Path
+
+
+
+#--------Data Transformation-----------------------
+#step3)update the entity file --->is nothing we r defining the class variable
+#which was used in yaml file and futhure taking rtn as function
+
+@dataclass
+class DataTransformationConfig():
+    #defining class variable along with dtypes
+    root_dir_path:Path
+    save_obj_dirpath: Path
+    csv_dir_path: Path
+

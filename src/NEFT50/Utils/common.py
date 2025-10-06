@@ -37,3 +37,16 @@ def Create_Directory(path_to_directories:list,verbose=True):
                 logger.info(f'Directory Created at {filepath}')
     except Exception as e:
         raise CustomException(e,sys)
+    
+    
+def Save_object(filepath,object):
+    logger.info('Here in Utils we r Creating Save object Function will Save model and preprocessor files to artifacts Folder')
+    try:
+        logger.info('Now Checking Filepath Exist or not')
+        if not os.path.exists('artifacts'):
+            os.makedirs('artifacts',exist_ok=True)
+        with open(filepath,'wb') as file:
+            dill.dump(object,file)
+        logger.info('Object Save Into Artfacts Folder')
+    except Exception as e:
+        raise CustomException(e,sys)
